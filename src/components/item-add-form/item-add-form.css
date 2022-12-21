@@ -1,0 +1,12 @@
+.item-add-form {
+  display: grid;
+  /* place-items: center; */
+  gap: 10px;
+  grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 480px) {
+  .item-add-form {
+    grid-template-columns: 1fr;
+  }
+}

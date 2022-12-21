@@ -1,0 +1,142 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.app {
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  padding: 6px;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.button-danger {
+  background-color: #d9534f;
+}
+
+.button-danger:hover {
+  background-color: #CC0000;
+}
+
+.button-success {
+  background-color: #007E33;
+  /* background-color: #5cb85c; */
+}
+
+.button-success.disabled {
+  background-color: #5cb85c;
+  /* background-color: #5cb85c; */
+}
+
+.button-success:hover:enabled {
+  background-color: #01682a;
+}
+
+.button-warning {
+  background-color: #ebbb1d;
+  /* background-color: #5cb85c; */
+}
+
+.text-white {
+  color: white;
+}
+
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.input-text {
+  outline: none !important;
+  border-radius: 4px;
+  border: 1px solid rgb(151, 165, 179);
+  padding: 7px;
+  max-height: 35px;
+  /* max-width: 100%; */
+}
+
+.input-text:focus {
+  border: 1px solid rgb(50, 150, 243);
+  box-shadow: 0 0 10px #719ECE;
+}

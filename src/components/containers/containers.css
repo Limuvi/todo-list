@@ -1,0 +1,10 @@
+.todo-container {
+  display: grid;
+  row-gap: 15px;
+  margin: 10px;
+  max-width: 700px;
+}
+
+.todo-header {
+  text-align: center;
+}
